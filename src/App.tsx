@@ -31,14 +31,14 @@ function App() {
   // Творительный падеж
   const createInstrumental = () => {
     if (['а'].includes(value.slice(-1))) {
-      const changeNoun = value.replace(/.$/, 'о')
+      const changeNoun = value.replace(/.$/, 'ой')
       setResult(changeNoun)
     } 
   }
   // Предложный падеж
   const createPrepositional = () => {
     if (['а'].includes(value.slice(-1))) {
-      const changeNoun = value.replace(/.$/, 'е')
+      const changeNoun = value.replace('', 'о ').replace(/.$/, 'е')
       setResult(changeNoun)
     } 
   }
