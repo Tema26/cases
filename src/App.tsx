@@ -8,22 +8,22 @@ function App() {
   
   //  Родительный падеж
 
-  const createGenitive = () => {
+  const createGenitive = ():void => {
     if (expectedEndings.includes(word.slice(-1))) {
-      const changeNoun = word.replace(/.$/, 'и')
-      setResult(changeNoun)
+      const modifiedNoun = word.replace(/.$/, 'и')
+      setResult(modifiedNoun)
     } 
   }
 
    // Дательный падеж
-   const createDative = () => {
+   const createDative = ():void => {
     if (expectedEndings.includes(word.slice(-1))) {
       const modifiedNoun = word.replace(/.$/, 'е')
       setResult(modifiedNoun)
     } 
   }
   // Винительный падеж
-  const createАccusative = () => {
+  const createАccusative = ():void => {
     if (expectedEndings.includes(word.slice(-1))) {
       const modifiedNoun = word.replace(/.$/, 'у')
       setResult(modifiedNoun)
@@ -31,18 +31,18 @@ function App() {
   }
 
   // Творительный падеж
-  const createInstrumental = () => {
+  const createInstrumental = ():void => {
     if (expectedEndings.includes(word.slice(-1))) {
       const modifiedNoun = word.replace(/.$/, 'ой')
       setResult(modifiedNoun)
     } 
   }
   // Предложный падеж
-  const createPrepositional = () => {
+  const createPrepositional = ():void => {
     if (expectedEndings.includes(word.slice(-1))) {
       const setPreposition = word.replace('', 'о ') 
-      const changeEnding  = setPreposition.replace(/.$/, 'е')
-      setResult(changeEnding)
+      const modifiedNoun  = setPreposition.replace(/.$/, 'е')
+      setResult(modifiedNoun)
     } 
   }
   return (
