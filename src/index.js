@@ -2,6 +2,9 @@ const inputWord = document.querySelector('.input_word')
 const lastLetterInWord = inputWord.value
 const modifiedNoun = document.querySelector('.result')
 let possibleEndingThisCase = ['а']
+const reset = function() {
+    return modifiedNoun = " "
+}
 
 // Родительный падеж
 const btnGenetive = document.querySelector('.btn_genitive')
@@ -9,6 +12,7 @@ btnGenetive.addEventListener('click', () => {
     if (lastLetterInWord.slice(-1) == possibleEndingThisCase) {
         const changeNoun = lastLetterInWord.replace(/.$/, 'и')
         modifiedNoun.insertAdjacentHTML("afterend", changeNoun )
+        reset()
     } 
     
 })
