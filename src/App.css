@@ -1,0 +1,23 @@
+.App {
+  text-align: center;
+}
+
+.App-header {
+  background-color: #282c34;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: 24px;
+  padding: 10px;
+  color: white;
+}
+
+.wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20% 0;
+  flex-direction: column;
+  row-gap: 20px;
+}
