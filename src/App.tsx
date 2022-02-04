@@ -4,12 +4,12 @@ import './App.css';
 function App() {
   const [word, setValue] = useState('');
   const [result, setResult] = useState('');
-  const lastCharacter = ['а']
+  const expectedEndings  = ['а']
   
   //  Родительный падеж
 
   const createGenitive = () => {
-    if (lastCharacter.includes(word.slice(-1))) {
+    if (expectedEndings.includes(word.slice(-1))) {
       const changeNoun = word.replace(/.$/, 'и')
       setResult(changeNoun)
     } 
@@ -17,14 +17,14 @@ function App() {
 
    // Дательный падеж
    const createDative = () => {
-    if (lastCharacter.includes(word.slice(-1))) {
+    if (expectedEndings.includes(word.slice(-1))) {
       const modifiedNoun = word.replace(/.$/, 'е')
       setResult(modifiedNoun)
     } 
   }
   // Винительный падеж
   const createАccusative = () => {
-    if (lastCharacter.includes(word.slice(-1))) {
+    if (expectedEndings.includes(word.slice(-1))) {
       const modifiedNoun = word.replace(/.$/, 'у')
       setResult(modifiedNoun)
     } 
@@ -32,17 +32,17 @@ function App() {
 
   // Творительный падеж
   const createInstrumental = () => {
-    if (lastCharacter.includes(word.slice(-1))) {
+    if (expectedEndings.includes(word.slice(-1))) {
       const modifiedNoun = word.replace(/.$/, 'ой')
       setResult(modifiedNoun)
     } 
   }
   // Предложный падеж
   const createPrepositional = () => {
-    if (['а'].includes(word.slice(-1))) {
-      const prepositionalDeclension = word.replace('', 'о ') 
-      const modifiedNoun = prepositionalDeclension.replace(/.$/, 'е')
-      setResult(modifiedNoun)
+    if (expectedEndings.includes(word.slice(-1))) {
+      const setPreposition = word.replace('', 'о ') 
+      const changeEnding  = setPreposition.replace(/.$/, 'е')
+      setResult(changeEnding)
     } 
   }
   return (
