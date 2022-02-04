@@ -2,45 +2,47 @@ import {useState} from 'react';
 import './App.css';
 
 function App() {
-  const [value, setValue] = useState('');
+  const [word, setValue] = useState('');
   const [result, setResult] = useState('');
+  const lastCharacter = ['а']
   
   //  Родительный падеж
 
   const createGenitive = () => {
-    if (['а'].includes(value.slice(-1))) {
-      const changeNoun = value.replace(/.$/, 'и')
+    if (lastCharacter.includes(word.slice(-1))) {
+      const changeNoun = word.replace(/.$/, 'и')
       setResult(changeNoun)
     } 
   }
 
    // Дательный падеж
    const createDative = () => {
-    if (['а'].includes(value.slice(-1))) {
-      const changeNoun = value.replace(/.$/, 'е')
-      setResult(changeNoun)
+    if (lastCharacter.includes(word.slice(-1))) {
+      const modifiedNoun = word.replace(/.$/, 'е')
+      setResult(modifiedNoun)
     } 
   }
   // Винительный падеж
   const createАccusative = () => {
-    if (['а'].includes(value.slice(-1))) {
-      const changeNoun = value.replace(/.$/, 'у')
-      setResult(changeNoun)
+    if (lastCharacter.includes(word.slice(-1))) {
+      const modifiedNoun = word.replace(/.$/, 'у')
+      setResult(modifiedNoun)
     } 
   }
 
   // Творительный падеж
   const createInstrumental = () => {
-    if (['а'].includes(value.slice(-1))) {
-      const changeNoun = value.replace(/.$/, 'ой')
-      setResult(changeNoun)
+    if (lastCharacter.includes(word.slice(-1))) {
+      const modifiedNoun = word.replace(/.$/, 'ой')
+      setResult(modifiedNoun)
     } 
   }
   // Предложный падеж
   const createPrepositional = () => {
-    if (['а'].includes(value.slice(-1))) {
-      const changeNoun = value.replace('', 'о ').replace(/.$/, 'е')
-      setResult(changeNoun)
+    if (['а'].includes(word.slice(-1))) {
+      const prepositionalDeclension = word.replace('', 'о ') 
+      const modifiedNoun = prepositionalDeclension.replace(/.$/, 'е')
+      setResult(modifiedNoun)
     } 
   }
   return (
@@ -58,9 +60,9 @@ function App() {
           <button onClick={createInstrumental}>Т.п.</button>
           <button onClick={createPrepositional}>П.п.</button>
         </div>
-        <div>Результат: <span>{result}</span></div>
-      </div>
-      </div>
+          <div>Результат: <span>{result}</span></div>
+            </div>
+              </div>
   );
 }
 
