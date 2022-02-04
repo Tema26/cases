@@ -4,6 +4,7 @@ import './App.css';
 function App() {
   const [value, setValue] = useState('');
   const [result, setResult] = useState('');
+  
   //  Родительный падеж
 
   const createGenitive = () => {

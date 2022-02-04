@@ -21,3 +21,24 @@
   flex-direction: column;
   row-gap: 20px;
 }
+button {
+  padding: 10px 15px;
+  border-radius: 3px;
+  background-color: #008000;
+  margin: 2px;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #007000;
+}
+
+button:active {
+  background-color: #006000;
+}
+
+input {
+  padding: 10px;
+}
