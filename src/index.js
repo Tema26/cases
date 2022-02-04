@@ -1,5 +1,6 @@
 const inputWord = document.querySelector('.input_word')
 const i = inputWord.value
+const result = document.querySelector('.result')
 
 // Родительный падеж
 const btnGenetive = document.querySelector('.btn_genitive')
@@ -7,7 +8,7 @@ const resultGenitiveCase = btnGenetive.addEventListener('click', () => {
 
     if (i.slice(-1) == 'а') {
         const res = i.replace(/.$/, 'и')
-        alert(res);
+        result.innerHTML += res
     } 
     
 })
@@ -17,7 +18,7 @@ const btnDative = document.querySelector('.btn_dative')
 const resultDativeCase = btnDative.addEventListener('click', () => {
     if (i.slice(-1) == 'а') {
         const res = i.replace(/.$/, 'е')
-        alert(res);
+        result.innerHTML += res
     } 
 
 })
@@ -27,7 +28,7 @@ const btnАccusative = document.querySelector('.btn_accusative')
 const resultAccusativeCase = btnАccusative.addEventListener('click', () => {
     if (i.slice(-1) == 'а') {
         const res = i.replace(/.$/, 'у')
-        alert(res);
+        result.innerHTML += res
     } 
 
 })
@@ -37,7 +38,7 @@ const btnInstrumental = document.querySelector('.btn_instrumental')
 const resultInstrumentalCase = btnInstrumental.addEventListener('click', () => {
     if (i.slice(-1) == 'а') {
         const res = i.replace(/.$/, 'ой')
-        alert(res);
+        result.innerHTML += res
     } 
 
 })
@@ -47,7 +48,10 @@ const btnPrepositional = document.querySelector('.btn_prepositional')
 const resultPrepositionalCase = btnPrepositional.addEventListener('click', () => {
     if (i.slice(-1) == 'а') {
         const res = i.replace('', 'о ').replace(/.$/, 'е');
-        alert(res);
+        result.innerHTML += res
 }
 })
+
+// const result = document.querySelector('.result')
+// result.innerHTML += i
 
