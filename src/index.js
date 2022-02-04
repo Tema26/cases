@@ -1,13 +1,13 @@
 const inputWord = document.querySelector('.input_word')
-const i = inputWord.value
+const lastLetterInWord = inputWord.value
 const result = document.querySelector('.result')
 
 // Родительный падеж
 const btnGenetive = document.querySelector('.btn_genitive')
 const resultGenitiveCase = btnGenetive.addEventListener('click', () => {
 
-    if (i.slice(-1) == 'а') {
-        const res = i.replace(/.$/, 'и')
+    if (lastLetterInWord.slice(-1) == 'а') {
+        const res = lastLetterInWord.replace(/.$/, 'и')
         result.innerHTML += res
     } 
     
@@ -16,8 +16,8 @@ const resultGenitiveCase = btnGenetive.addEventListener('click', () => {
 // Дательный падеж
 const btnDative = document.querySelector('.btn_dative')
 const resultDativeCase = btnDative.addEventListener('click', () => {
-    if (i.slice(-1) == 'а') {
-        const res = i.replace(/.$/, 'е')
+    if (lastLetterInWord.slice(-1) == 'а') {
+        const res = lastLetterInWord.replace(/.$/, 'е')
         result.innerHTML += res
     } 
 
@@ -26,8 +26,8 @@ const resultDativeCase = btnDative.addEventListener('click', () => {
 // Винительный падеж
 const btnАccusative = document.querySelector('.btn_accusative')
 const resultAccusativeCase = btnАccusative.addEventListener('click', () => {
-    if (i.slice(-1) == 'а') {
-        const res = i.replace(/.$/, 'у')
+    if (lastLetterInWord.slice(-1) == 'а') {
+        const res = lastLetterInWord.replace(/.$/, 'у')
         result.innerHTML += res
     } 
 
@@ -36,8 +36,8 @@ const resultAccusativeCase = btnАccusative.addEventListener('click', () => {
 // Творительный падеж
 const btnInstrumental = document.querySelector('.btn_instrumental')
 const resultInstrumentalCase = btnInstrumental.addEventListener('click', () => {
-    if (i.slice(-1) == 'а') {
-        const res = i.replace(/.$/, 'ой')
+    if (lastLetterInWord.slice(-1) == 'а') {
+        const res = lastLetterInWord.replace(/.$/, 'ой')
         result.innerHTML += res
     } 
 
@@ -46,8 +46,8 @@ const resultInstrumentalCase = btnInstrumental.addEventListener('click', () => {
 // Предложный падеж
 const btnPrepositional = document.querySelector('.btn_prepositional')
 const resultPrepositionalCase = btnPrepositional.addEventListener('click', () => {
-    if (i.slice(-1) == 'а') {
-        const res = i.replace('', 'о ').replace(/.$/, 'е');
+    if (lastLetterInWord.slice(-1) == 'а') {
+        const res = lastLetterInWord.replace('', 'о ').replace(/.$/, 'е');
         result.innerHTML += res
 }
 })
